@@ -73,13 +73,21 @@ Valve movement caused by sensor noise (standard deviation): PI 0.040, PI + Smith
 | File | Purpose |
 |---|---|
 | `hx_model.m` | Plant model and open-loop step response |
-| `hx_identify.m` | Step-test generation and system identification |
+| `hx_identify.m` | Step-test generation and system identification (saves `hx_est.mat`) |
+| `hx_est.mat` | Identified model, loaded by the other scripts |
 | `hx_pi.m`, `hx_smith.m` | First PI and Smith predictor designs |
-| `hx_robust.m`, `hx_dist.m`, `hx_noise.m` | Robustness, disturbance and noise tests |
+| `hx_robust.m`, `hx_dist.m`, `hx_noise.m` | Robustness, disturbance and noise tests (first design) |
 | `hx_final.m`, `results.csv` | First design: full comparison table |
 | `hx_final2.m`, `results2.csv` | Final design (sensor lag modelled): full comparison table |
 | `hx_check.m` | Sensitivity peak Ms and valve-noise check |
-| `Heat_Exchanger_Smith_Predictor_Report.docx` | Full project report |
+| `Heat_Exchanger_Smith_Predictor_Report.pdf` | Full project report |
+| `fig_nominal.png`, `fig_robustness.png` | Figures shown above |
+
+## How to run
+
+1. Run `hx_identify.m` to identify the model. It saves `hx_est.mat` (a copy is included).
+2. Run `hx_final2.m` for the final results table, and `hx_check.m` for the sensitivity peaks, valve noise and figures.
+3. `hx_model.m` is stand-alone and shows the open-loop plant response.
 
 ## Requirements
 
