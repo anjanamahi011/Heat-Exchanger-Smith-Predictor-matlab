@@ -61,9 +61,9 @@ Valve movement caused by sensor noise (standard deviation): PI 0.040, PI + Smith
 
 ## Figures
 
-[![Nominal response: PI versus PI with Smith predictor](fig_nominal.png)](fig_nominal.png)
+![Nominal response: PI versus PI with Smith predictor](fig_nominal.png)
 
-[![Robustness to delay and gain error](fig_robustness.png)](fig_robustness.png)
+![Robustness to delay and gain error](fig_robustness.png)
 
 ## Limitations
 
